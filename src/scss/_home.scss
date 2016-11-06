@@ -1,0 +1,346 @@
+body {
+	background-color: $black;
+	background-image: $bg-image;
+	font-family: $body-font;
+	overflow-y: scroll;
+	position: relative;
+	width: full;
+	font-size: 12px;
+
+	ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.holder {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		top: -3000px;
+		left: -3000px;
+	}
+
+	.desktop {
+		display: none;
+		position: absolute;
+		left: -1000px;
+		top: -1000px;
+		width: 1px;
+		height: 1px;
+	}
+}
+
+/* wrapper and main container styles */
+
+#wrapper {
+	width: $full;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	.main {
+		width: $full;
+		margin: 0px auto;
+		position: relative;
+		max-width: 1170px;
+		top: 0px;
+		left: 0px;
+	}
+
+	#cssda {
+		position: absolute;
+		top: 15px;
+		z-index: 5000;
+		right: 0;
+		width: 50px;
+		height: 123px;
+		display: none;
+	}
+}
+
+/* end of wrapper and main container styles */
+
+/* nav styles */
+
+nav {
+	width: 50px;
+	background-image: $bg-image;
+	height: $full;
+	box-shadow: 3px 0px 3px 0px #101010;
+	z-index: 400;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	display: block;
+	position: relative;
+
+	.menu {
+		position: absolute;
+		text-align: center;
+		display: block;
+		padding-top: 5px;
+		top: 0px;
+		left: 50px;
+		width: 50px;
+		z-index: 450;
+
+		li {
+			display: block;
+			width: $full;
+			float: left;
+
+			a {
+				display: block;
+				float: left;
+				width: $full;
+				display: block;
+				position: relative;
+				min-height: 50px;
+				cursor: pointer;
+
+				&.short {
+					height: 50px;
+				}
+
+				span {
+					font-family: $heading-font;
+					font-size: $tiny;
+					display: block;
+					color: $grey;
+					text-transform: uppercase;
+					background-image: $bg-image;
+					padding-bottom: 8px;
+					padding-top: 15px;
+					width: 50px;
+					position: absolute;
+					z-index: 2000;
+					top: 0;
+					left: 0;
+					letter-spacing: 1px;
+
+					&.textHighlight {
+						color: $white;
+					}
+
+					&.bg {
+						background-color: $secondary-grey;
+						height: $full;
+						width: 32px;
+						display: block;
+						background-image: none;
+						margin: auto;
+						padding: 0px;
+						position: static;
+					}
+				} 
+			}
+		}
+	}
+
+	.loader {
+		position: absolute;
+		top: 18px;
+		left: 9px;
+
+		img {
+			display: block;
+		}
+	}
+}
+
+/* end of nav styles */
+
+/* main content containers styles */
+
+.main {
+	.zoom {
+		position: absolute;
+		width: 1980px;
+		height: $full;
+		top: 0px;
+		left: 50px;
+		background-image: $bg-image;
+		background-color: $black;
+		box-shadow: 0px 0px 3px 2px #101010;
+		z-index: 500;
+		overflow: hidden;
+	}
+
+	.content {
+		background-color: $orange;
+		position: relative;
+		z-index: 50;
+		height: $full;
+		left: 50px;
+		top: 0px;
+	}
+}
+
+/* end of main content containers styles */
+
+
+/* header styles */
+
+.intro {
+	height: 200px;
+	background-image: url("../img/ui/head.png");
+	background-position: center -130px;
+	width: $full;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	img {
+		padding-top: 46px;
+		display: block;
+		width: 84%;
+		margin: auto;
+	}
+
+	.tagline {
+		padding-top: 6px;
+		width: $full;
+		text-align: center;
+
+		span {
+			font-family: $heading-font;
+			font-size: $small;
+			color: $white;
+			display: inline-block;
+			background-image: url("../img/ui/ornament.png");
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: 330px 14px;
+			padding-top: 20px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+/* end of header styles */
+
+/* footer styles */
+
+footer {
+	padding-bottom: 15px;
+	width: 70%;
+	margin: auto;
+	text-align: center;
+
+	span {
+		font-size: 10px;
+		color: $white;
+		display: inline-block;
+		background-image: url("../img/ui/ornament-footer.png");
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: 330px 14px;
+		padding-top: 23px;
+		opacity: 0.8;
+	}
+}
+
+/* end of footer styles */
+
+/* responsive styles */
+
+@media screen and (min-width: $medium-phone) {
+
+	#wrapper {
+		#cssda {
+			display: block;
+		}
+	}
+
+	.intro {
+		img {
+			padding-top: 40px;
+			width: 58%;	
+		}
+
+		.tagline {
+			span {
+				font-size: $medium;
+			}
+		}
+	}
+
+	footer { 
+		span {
+			font-size: $tiny;
+		}
+	}
+}
+
+@media screen and (min-width: $big-phone) {
+
+	body {
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: $tablet) {
+
+	.intro {
+		height: 280px;
+		background-position: center -50px;
+
+		img {
+			padding-top: 66px;
+			width: 54%;	
+		}
+
+		.tagline {
+			padding-top: 10px;
+
+			span {
+				font-size: $standard;
+				padding-top: 24px;
+			}
+		}
+	}
+
+	footer {
+		padding-bottom: 20px;
+
+		span {
+			font-size: 12px;
+		}
+	}
+}
+
+@media screen and (min-width: $laptop) {
+
+	body {
+
+		.desktop {
+			display: block;
+		}
+	}
+
+	.intro {
+		height: 330px;
+		background-position: center 0px;
+
+		img {
+			padding-top: 76px;
+		}
+
+		.tagline {
+			padding-top: 14px;
+
+			span {
+				font-size: 20px;
+				padding-top: 28px;
+			}
+		}
+	}
+}
+

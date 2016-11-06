@@ -1,0 +1,179 @@
+@import "variables";
+
+.ie8 {
+
+	.main {
+		.zoom {
+			border-left: 1px solid #161616;
+
+			.loader {
+				filter: alpha(opacity=100);
+			}
+		}
+	}
+
+	nav {
+		border-right: 1px solid #161616;
+	}
+
+	.intro {
+
+		.tagline {
+
+			span {
+	    		background-image: url("../img/ui/ornament-ie.png");
+	    	}
+		}
+	}
+
+	.worksSection {
+
+		header {
+
+			h1 {
+				cursor: none;
+				background-image: url("../img/ui/heading-bg-ie.png");
+				background-repeat: no-repeat;
+				background-color: transparent;
+				width: 69px;
+				height: 69px;
+			}
+
+			span {
+				background-color: transparent;
+				width: 69px;
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+		.shadow {
+			display: none;
+		}
+	}
+
+	.aboutSection {
+
+		background-color: $blue;
+
+		header {
+
+			h1 {
+				cursor: none;
+				background-image: url("../img/ui/heading-bg-ie.png");
+				background-repeat: no-repeat;
+				background-color: transparent;
+				width: 69px;
+				height: 69px;
+			}
+
+			span {
+				background-color: transparent;
+				width: 69px;
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+		.aboutContent {
+
+			.info {
+
+				.downloadButton {
+
+					.shadow {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.backgroundPic {
+			background-image: none;
+
+			img {
+				width: $full;
+				height: 557px;
+			}
+		}
+
+		.backgroundFill {
+			top: 500px;
+		}
+	}
+
+	.tags li {
+	    background-image: url("../img/ui/tags-bg-ie.png") !important;
+	}
+
+	.preview {
+		filter: alpha(opacity=0);
+		zoom: 1;
+	}
+
+	.preview {
+
+		.previewContent {
+
+			.bigImg {
+
+				img {
+					filter: alpha(opacity=0);
+					zoom: 1;
+
+					&.selected {
+						filter: alpha(opacity=100);
+						zoom: 1;
+					}
+				}
+			}
+
+			.details {
+
+				.gallery {
+
+					a {
+
+						img {
+
+							&.active {
+								filter: alpha(opacity=30);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.contactSection {
+
+		.contactContent {
+
+			.shapes {
+
+				a {
+
+					.fadingIcon {
+						display: block;
+					}
+
+					.e-mail {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		span {
+	    	background-image: url("../img/ui/ornament-footer-ie.png");
+		}
+	}
+}
+

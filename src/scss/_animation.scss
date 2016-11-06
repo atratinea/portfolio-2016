@@ -1,0 +1,24 @@
+@-webkit-keyframes right {
+  0% {-webkit-transform: translate(-3px) rotate(-45deg);}
+  50% {-webkit-transform: translate(3px) rotate(-45deg);}
+  100% {-webkit-transform: translate(-3px) rotate(-45deg);}
+}
+
+@-webkit-keyframes left {
+  0% {-webkit-transform: translate(3px) rotate(-45deg);}
+  50% {-webkit-transform: translate(-3px) rotate(-45deg);}
+  100% {-webkit-transform: translate(3px) rotate(-45deg);}
+}
+
+
+@keyframes right {
+  0% {transform: translate(-3px) rotate(-45deg);}
+  50% {transform: translate(3px) rotate(-45deg);}
+  100% {transform: translate(-3px) rotate(-45deg);}
+}
+
+@keyframes left {
+  0% {transform: translate(3px) rotate(-45deg);}
+  50% {transform: translate(-3px) rotate(-45deg);}
+  100% {transform: translate(3px) rotate(-45deg);}
+}

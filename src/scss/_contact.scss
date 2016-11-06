@@ -1,0 +1,190 @@
+.contactSection  {
+	background-image: url("../img/ui/contact-bg-pattern.gif");
+    background-repeat: repeat;
+	position: relative;
+  	width: $full;
+  	height: $full;
+  	z-index: 600;
+
+  	.backgroundAngle {
+		background-image: url("../img/ui/about-bg-angle.png");
+	    background-repeat: no-repeat;
+	    background-position: top center;
+		width: $full;
+		height: 77px;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		z-index: 650;
+	}
+
+	.contactContent {
+		width: 60%;
+		height: $full;
+		margin: auto;
+		position: relative;
+		top: -80px;
+		left: auto;
+		z-index: 700;
+
+		.shapes {
+			width: $full;
+			height: $full;
+			margin-left: 2%;
+			@include anti-rotation;
+
+			a {
+				width: 48%;
+				display: block;
+				float: left;
+				margin-right: 2%;
+				margin-bottom: 2%;
+				position: relative;
+				box-shadow: -1px 1px 1px 0px #010101;
+				overflow: hidden;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			  	-webkit-tap-highlight-color: transparent;
+			  	transition: background-color 0.3s;
+
+			  	&.orange {
+			  		background-color: $orange;
+
+			  		&:hover {
+						background-color: #ec5227;
+			  		}
+			  	}
+
+			  	&.black {
+			  		background-color: $secondary-detail-black;
+
+			  		&:hover {
+			  			background-color: $black;
+			  		}
+			  	}
+
+			  	&.blue {
+			  		background-color: $blue;
+
+			  		&:hover {
+			  			background-color: #3a7a97;
+			  		}
+			  	}
+
+			  	.icon {
+			  		position: relative;
+					z-index: 950;
+					display: block;
+					padding-top: 30%;
+					padding-bottom: 30%;
+					width: 40%;
+					margin: auto;
+					@include rotation;
+				  	opacity: 1; 
+			  	}
+
+			  	.e-mail {
+					position: absolute;
+					z-index: 960;
+					@include rotation;
+					opacity: 0;
+					width: 88%;
+					top: 0;
+					left: 0;
+				}
+			} 
+		}
+	}
+}
+
+/* responsive styles */
+
+@media screen and (min-width: $medium-phone) {
+
+	.contactSection {
+
+		.contactContent {
+			width: 50%;
+			top: -108px;
+		}
+	}
+}
+
+@media screen and (min-width: $big-phone) {
+
+	.contactSection {
+
+		.contactContent {
+			width: 40%;
+			top: -110px;
+		}
+	}
+}
+
+@media screen and (min-width: $tablet) {
+
+	.contactSection {
+
+		.contactContent {
+			width: 40%;
+			top: -135px;
+		}
+	}
+}
+
+@media screen and (min-width: $laptop) {
+
+	.contactSection {
+
+		.contactContent {
+			width: 35%;
+			top: -165px;
+
+			.shapes {
+
+				a {
+
+					-webkit-transform: translate3d(0,0,0);
+					-moz-transform: translate3d(0,0,0);
+					transform: translate3d(0,0,0);
+
+					.fadingIcon {
+						-webkit-transition: opacity 0.4s ease-in-out;
+					  	-moz-transition: opacity 0.4s ease-in-out;
+					  	-o-transition: opacity 0.4s ease-in-out;
+					  	transition: opacity 0.4s ease-in-out;
+					}
+
+					.e-mail {
+						-webkit-transition: opacity 0.4s ease-in-out;
+					  	-moz-transition: opacity 0.4s ease-in-out;
+					  	-o-transition: opacity 0.4s ease-in-out;
+					  	transition: opacity 0.4s ease-in-out;
+					  	left: 10px;
+						top: 72px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $screen) {
+
+	.contactSection {
+
+		.contactContent {
+
+			.shapes {
+
+				a {
+					.e-mail {
+						left: 10px;
+						top: 85px;
+					}
+				}
+			}
+		}
+	}
+}
+	
+

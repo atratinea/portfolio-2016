@@ -1,0 +1,44 @@
+/* colours */
+
+$black: #232323;
+$secondary-black: #000;
+$detail-black: #202020;
+$secondary-detail-black: #1b1c1b;
+$grey: #5d5d5d;
+$secondary-grey: #313131;
+$white: #fff;
+$orange: #e53e0f;
+$blue: #266c8c;
+$secondary-blue: #163c4f;
+
+/* fonts */
+
+$body-font: 'Telex', sans-serif;
+$heading-font: 'Oswald', sans-serif;
+
+/* font size */
+
+$tiny: 10px;
+$small: 11px;
+$medium: 14px;
+$standard: 16px;
+$big: 18px;
+
+$body-text-size: 12px;
+
+/* dimensions */
+
+$full: 100%;
+$max-width: 1024px;
+
+/* images */
+
+$bg-image: url("../img/ui/bg.jpg");
+
+/* breakpoints */
+
+$medium-phone: 480px;
+$big-phone: 640px;
+$tablet: 768px;
+$laptop: 992px;
+$screen: 1200px;
