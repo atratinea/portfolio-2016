@@ -186,39 +186,15 @@ function imageClickEvent() {
 
 		// extracting number from element's src
 		imageNo = parseInt($(this).attr("src").substr(14,1));
+		imageNo=parseInt($(this).parent().index(), 10);
 		
 		// adding class to clicked element, removing class from other matched elements
 		$(".gallery a img.active").removeClass("active");
 		$(this).addClass("active");
 
-		// statement adding class to an element being in order with clicked element's 
-		// imageNo, removing class from other elements  
-		switch (imageNo) {
-			case 1:
-			$(".bigImg img").removeClass("selected");
-			$(".bigImg img").first().addClass("selected");
-			break;
+		$(".bigImg img").removeClass("selected");
+		$(".bigImg").children().eq(imageNo).addClass("selected");
 
-			case 2:
-			$(".bigImg img").removeClass("selected");
-			$(".bigImg").children().eq(1).addClass("selected");
-			break;
-
-			case 3:
-			$(".bigImg img").removeClass("selected");
-			$(".bigImg").children().eq(2).addClass("selected");
-			break;
-
-			case 4:
-			$(".bigImg img").removeClass("selected");
-			$(".bigImg").children().eq(3).addClass("selected");
-			break;
-
-			case 5:
-			$(".bigImg img").removeClass("selected");
-			$(".bigImg").children().eq(4).addClass("selected");
-			break;
-		}
 	});
 };
 
